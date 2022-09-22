@@ -1,6 +1,5 @@
-- add basic linear algebra library
-- optimize it
 - create feed forward
 - create backpropogation
 - add different activation function
 - add different optimizers.
+- create support for easy image processing 
