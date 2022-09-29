@@ -16,10 +16,13 @@ class Network:
     def sigmoid(number):
         return (1/(1+math.exp(-number)))
 
-    def NN(lists, activationFunction):
+    def NN(lists):
+        layersList = []
+        for x in lists:
+            layersList.append(np.zeros(x))
+        # for x in lists:
+        #     weights = np.arange(0, shape=())
+        return layersList, weights
 
-        dataType = object
-        arr = np.zeros(shape=(len(lists)), dtype=dataType)
-        for x in range(0, len(lists)):
-            arr[x] = np.zeros(shape=lists[x], dtype=dataType)
-        return arr
+
+layersList, weights = Network.NN([2, 3, 5, 7])
