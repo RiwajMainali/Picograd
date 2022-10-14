@@ -16,13 +16,13 @@ class Network:
     def sigmoid(number):
         return (1/(1+math.exp(-number)))
 
-    def NN(lists):
-        layersList = []
-        for x in lists:
-            layersList.append(np.zeros(x))
-        # for x in lists:
-        #     weights = np.arange(0, shape=())
+    # if a neuron isn't needed in a layer, put it as zero which is why, max(layers) is used.
+    def NN(layers, dim=2):
+
+        layersList = np.zeros((max(layers), len(layers)), dtype=float)
+        weights = []
         return layersList, weights
 
 
-layersList, weights = Network.NN([2, 3, 5, 7])
+layers, weights = Network.NN([2, 4, 5])
+print(layers)

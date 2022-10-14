@@ -1,2 +1,8 @@
 
 *.tmp
+.vs/VSWorkspaceState.json
+.vs/ProjectSettings.json
+.vs/Picograd/v17/.suo
+.vs/Picograd/FileContentIndex/read.lock
+.vs/Picograd/FileContentIndex/5144588b-5e29-4ec9-995d-fdf33f074c12.vsidx
+.vs/slnx.sqlite
