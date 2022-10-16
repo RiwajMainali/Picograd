@@ -4,7 +4,7 @@ import math
 activationFunctions = ['reLU', 'sigmoid', 'LreLU']
 
 
-class Network:
+class NN:
     def reLU(number):
         return max(0.0, number)
 
@@ -17,21 +17,22 @@ class Network:
     def sigmoid(number):
         return (1/(1+math.exp(-number)))
 
-    def NN(layers, weightsDim=None):
+    def __init__(self, layers, weightsDim=None):
         '''
             if a neuron isn't needed in a layer, put it as zero which is why, max(layers) is used.
             weightsDim will will accept list of dimensions. User will be responsible to match it with layers to make sure dot product is possible
         '''
-        weights = []
-        layersList = np.zeros((max(layers), len(layers)), dtype=float)
+        self.layers = np.ones((max(layers), len(layers)), dtype=float)
 
         if weightsDim is not None:
-            weights = np.zeros((max(weightsDim), len(weightsDim)))
+            self.weights = np.ones((max(weightsDim), len(weightsDim)))
 
         else:
-            weights = np.zeros((max(layers), len(layers)), dtype=float)
+            self.weights = np.ones((max(layers), len(layers)), dtype=float)
 
-        return layersList, weights, weightsDim
+        self.bias = np.ones(len(layers))
+        return None
 
 
-# layers, weights, weightsDim = Network.NN([2, 4, 5], [2, 1])
+basicNN = NN([2, 4, 5])
+print(basicNN.layers, basicNN.weights, basicNN.bias)

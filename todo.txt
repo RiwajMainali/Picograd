@@ -2,4 +2,4 @@
 - create backpropogation
 - add different activation function
 - add different optimizers.
-- create support for easy image processing 
+- create support for easy image processing
